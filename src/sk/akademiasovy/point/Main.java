@@ -1,5 +1,9 @@
 package sk.akademiasovy.point;
 
+import sk.akademiasovy.abstrakt.Person;
+import sk.akademiasovy.date.MyDate;
+import sk.akademiasovy.other.MyClass;
+
 public class Main {
     public static void main(String[] args) {
         Point p1= new Point(8,12);
@@ -46,5 +50,21 @@ public class Main {
         System.out.println("Perimeter of triangle1 is "+triangle1.getPerimeter());
         System.out.println("Area of triangle1 is "+triangle1.getArea());
         System.out.println("Is triangle1 equilateral is "+triangle1.isEquilateral());
+
+        MyDate myDate = new MyDate();
+        myDate.today();
+
+        MyDate myDate2 = new MyDate();
+        myDate2.today2();
+
+        MyClass res = new MyClass();
+        res.FormatName("erik");
+
+        String e="Erik";
+        System.out.println(e.substring(0,3));
+
+        Person p = new Teacher();
+        ((Teacher)p).setSalary(2200);
+
     }
 }

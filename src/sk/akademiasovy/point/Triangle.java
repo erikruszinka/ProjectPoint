@@ -71,21 +71,7 @@ public class Triangle implements InterfaceTriangle{
 
     @Override
     public boolean isIsosceles() {
-        double sideA=c.getDistanceFromAnotherPoint(b);
-        double sideB=a.getDistanceFromAnotherPoint(c);
-        double sideC=a.getDistanceFromAnotherPoint(b);
-        if(sideA==sideB){
-            return true;
-        }
-        if(sideA==sideC){
-            return true;
-        }
-        if(sideC==sideB){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return getSideA()==getSideB() || getSideB()==getSideC() || getSideC()==getSideA();
     }
 
     //public double getArea(){
